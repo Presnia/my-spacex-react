@@ -6,7 +6,7 @@ export default class FetchData {
         const res = await fetch(url);
 
         if (!res.ok) {
-          throw new Error (`Произошла ошибка ${res.status}`);
+        throw new Error (`Произошла ошибка ${res.status}`);
         }
 
         return await res.json();
