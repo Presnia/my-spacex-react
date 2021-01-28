@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Main from '../Main/Main';
 import useLaunches from '../useLaunches/useLaunches';
+import YouTube from 'react-youtube';
 import './details.css';
 
 const Details = (props) => {
@@ -14,8 +15,6 @@ const Details = (props) => {
 	useEffect(() => {
 		setLaunch(getLaunch(props.match.params.id));
 	}, [getLaunch, props.match.params.id]);
-
-	console.log((launch));
 
 	const history = useHistory();
 
@@ -33,9 +32,7 @@ const Details = (props) => {
 						<div className="details-content">
 							<p className="details-description">{launch?.details}</p>
 						</div>
-						<div>
-				<iframe className="details-youtube" width="560" height="315" src="https://www.youtube.com/embed/dLQ2tZEH6G0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-			</div>
+						<YouTube className="details-youtube" videoId={launch.links.youtube_id} />
 					</div>
 				</div>
 		<a onClick={history.goBack} className="button button-back">go back</a>
