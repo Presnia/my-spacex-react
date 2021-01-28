@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Features from './components/Features/Features';
@@ -8,7 +7,6 @@ import Footer from './components/Footer/Footer';
 import Calendar from './components/Calendar/Calendar';
 import Details from './components/Details/Details';
 import FetchData from './service/FetchData';
-
 import './style.css';
 
 class App extends React.Component {
@@ -54,8 +52,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Header rockets={this.state.rockets} changeRocket={ this.changeRocket } />
 
-        <Route exact 
-            path='/' 
+        <Route exact path='/'
             render={() => this.state.company && <Home company={this.state.company} />} />
         
         <Route 
