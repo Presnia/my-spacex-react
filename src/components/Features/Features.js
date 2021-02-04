@@ -11,6 +11,9 @@ const rocketImages = {
 };
 
 const Features = (props) => {
+
+	console.log(props)
+
 	const {
 		  name,
 			height,
