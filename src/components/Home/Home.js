@@ -4,28 +4,29 @@ import logo from '../../logo.svg'
 import background from "../../mainbg.jpg";
 
 
-const Home = ({ company }) => (
-	<main className="main" style={{ backgroundImage: `url(${background})`,
-		                              backgroundRepeat: 'no-repeat',
-		                              backgroundSize: 'cover',
-		                              height: '100%', }}>
-		<div className="container">
-			<hgroup className="title">
-				<h1>
-					<img className="logo-title" src={logo} alt={company.name}/>
-				</h1>
-				<h2 className="subtitle">
-					{company.summary}
-				</h2>
-			</hgroup>
+const Home = ({ company }) => {
+	return (
+		<main className="main" style={{ backgroundImage: `url(${background})`,
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: 'cover',
+			height: '100%', }}>
+			<div className="container">
+				<hgroup className="title">
+					<h1>
+						<img className="logo-title" src={logo} alt={company.name}/>
+					</h1>
+					<h2 className="subtitle">
+						{company.summary}
+					</h2>
+				</hgroup>
 
 
-			<div className="row">
-				<table className="home_table home_table-manager">
-					<caption className="home_table-title">
-						Manager
-					</caption>
-					<thead>
+				<div className="row">
+					<table className="home_table home_table-manager">
+						<caption className="home_table-title">
+							Manager
+						</caption>
+						<thead>
 						<tr>
 							<td className="home_table-column table-column-left">CEO</td>
 							<td className="home_table-column">{company.ceo}</td>
@@ -44,14 +45,14 @@ const Home = ({ company }) => (
 						</tr>
 
 
-					</thead>
-				</table>
+						</thead>
+					</table>
 
-				<table className="home_table home_table-location">
-					<caption className="home_table-title">
-						Location
-					</caption>
-					<thead>
+					<table className="home_table home_table-location">
+						<caption className="home_table-title">
+							Location
+						</caption>
+						<thead>
 						<tr>
 							<td className="home_table-column table-column-left">State</td>
 							<td className="home_table-column">{company.headquarters.state}</td>
@@ -65,19 +66,20 @@ const Home = ({ company }) => (
 							<td className="home_table-column">{company.headquarters.address}</td>
 						</tr>
 
-					</thead>
-				</table>
+						</thead>
+					</table>
 
-				<video id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
-					<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4"/>
-					<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
-				</video>
+					<video id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
+						<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4"/>
+						<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
+					</video>
+				</div>
+
 			</div>
 
-		</div>
-
-	</main>
-);
+		</main>
+	);
+}
 
 
 export default Home;
