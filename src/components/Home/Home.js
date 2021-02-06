@@ -5,11 +5,12 @@ import background from "../../mainbg.jpg";
 
 
 const Home = ({ company }) => {
+
 	return (
-		<main className="main" style={{ backgroundImage: `url(${background})`,
+		<main className="main" style={{
+			backgroundImage: `url(${background})`,
 			backgroundRepeat: 'no-repeat',
-			backgroundSize: 'cover',
-			height: '100%', }}>
+			backgroundSize: 'cover'}}>
 			<div className="container">
 				<hgroup className="title">
 					<h1>
@@ -20,31 +21,28 @@ const Home = ({ company }) => {
 					</h2>
 				</hgroup>
 
-
 				<div className="row">
 					<table className="home_table home_table-manager">
 						<caption className="home_table-title">
 							Manager
 						</caption>
 						<thead>
-						<tr>
-							<td className="home_table-column table-column-left">CEO</td>
-							<td className="home_table-column">{company.ceo}</td>
-						</tr>
-						<tr>
-							<td className="home_table-column table-column-left">COO</td>
-							<td className="home_table-column">{company.coo}</td>
-						</tr>
-						<tr>
-							<td className="home_table-column table-column-left">CTO</td>
-							<td className="home_table-column">{company.cto}</td>
-						</tr>
-						<tr>
-							<td className="home_table-column table-column-left">CTO PROPULSION</td>
-							<td className="home_table-column">{company.cto_propulsion}</td>
-						</tr>
-
-
+							<tr>
+								<td className="home_table-column table-column-left">CEO</td>
+								<td className="home_table-column">{company.ceo}</td>
+							</tr>
+							<tr>
+								<td className="home_table-column table-column-left">COO</td>
+								<td className="home_table-column">{company.coo}</td>
+							</tr>
+							<tr>
+								<td className="home_table-column table-column-left">CTO</td>
+								<td className="home_table-column">{company.cto}</td>
+							</tr>
+							<tr>
+								<td className="home_table-column table-column-left">CTO PROPULSION</td>
+								<td className="home_table-column">{company.cto_propulsion}</td>
+							</tr>
 						</thead>
 					</table>
 
@@ -53,19 +51,18 @@ const Home = ({ company }) => {
 							Location
 						</caption>
 						<thead>
-						<tr>
-							<td className="home_table-column table-column-left">State</td>
-							<td className="home_table-column">{company.headquarters.state}</td>
-						</tr>
-						<tr>
-							<td className="home_table-column table-column-left">City</td>
-							<td className="home_table-column">{company.headquarters.city}</td>
-						</tr>
-						<tr>
-							<td className="home_table-column table-column-left">Address</td>
-							<td className="home_table-column">{company.headquarters.address}</td>
-						</tr>
-
+							<tr>
+								<td className="home_table-column table-column-left">State</td>
+								<td className="home_table-column">{company.headquarters.state}</td>
+							</tr>
+							<tr>
+								<td className="home_table-column table-column-left">City</td>
+								<td className="home_table-column">{company.headquarters.city}</td>
+							</tr>
+							<tr>
+								<td className="home_table-column table-column-left">Address</td>
+								<td className="home_table-column">{company.headquarters.address}</td>
+							</tr>
 						</thead>
 					</table>
 
