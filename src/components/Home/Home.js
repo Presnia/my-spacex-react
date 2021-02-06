@@ -1,10 +1,14 @@
 import React from "react";
 import './home.css';
 import logo from '../../logo.svg'
+import background from "../../mainbg.jpg";
 
 
 const Home = ({ company }) => (
-	<main className="main">
+	<main className="main" style={{ backgroundImage: `url(${background})`,
+		                              backgroundRepeat: 'no-repeat',
+		                              backgroundSize: 'cover',
+		                              height: '100%', }}>
 		<div className="container">
 			<hgroup className="title">
 				<h1>

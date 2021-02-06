@@ -12,7 +12,7 @@ const rocketImages = {
 
 const Features = (props) => {
 
-	console.log(props)
+	// console.log(props)
 
 	const {
 		  name,
