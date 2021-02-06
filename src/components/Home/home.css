@@ -58,13 +58,17 @@
 }
 
 #video{
-	margin-top: 75px;
+	margin-top: 38px;
+	margin-left: 4%;
 	width: 600px;
 	order: 2;
 }
 
 
 @media (max-width: 1240px) {
+	#video {
+		margin-left: 0;
+	}
 	.row {
 		height: auto;
 	}
