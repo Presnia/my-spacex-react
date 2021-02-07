@@ -6,6 +6,7 @@ import Main from '../Main/Main';
 import useLaunches from '../useLaunches/useLaunches';
 import YouTube from 'react-youtube';
 import './details.css';
+import Aos from "aos";
 
 const Details = (props) => {
 
@@ -15,6 +16,10 @@ const Details = (props) => {
 	useEffect(() => {
 		setLaunch(getLaunch(props.match.params.id));
 	}, [getLaunch, props.match.params.id]);
+
+	useEffect(() => {
+		Aos.init({});
+	},[]);
 
 	const history = useHistory();
 

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import RelaxWrapper from 'react-rellax-wrapper';
 import Main from '../Main/Main';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 import './features.css';
 
 const rocketImages = {
@@ -12,7 +14,9 @@ const rocketImages = {
 
 const Features = (props) => {
 
-	// console.log(props)
+	useEffect(() => {
+		Aos.init({});
+	},[]);
 
 	const {
 		  name,
@@ -28,49 +32,49 @@ const Features = (props) => {
 
 				<Main rocket={name} />
 				<section className="features">
-					<h2 className="features-title">
+					<h2 className="features-title" data-aos="fade-up" data-aos-duration="3000">
 						{name} <br/>Overview
 					</h2>
 					<div className="overview">
 
 						<table className="table">
-							<caption className="table-title">
+							<caption className="table-title" data-aos="fade-up" data-aos-duration="3000">
 								Size
 							</caption>
-							<thead>
-							<tr>
-								<td className="table-column">HEIGHT</td>
-								<td className="table-column">{height.meters} m / {height.feet} ft</td>
-							</tr>
-							<tr>
-								<td className="table-column">DIAMETER</td>
-								<td className="table-column">{diameter.meters} m / {diameter.feet} ft</td>
-							</tr>
-							<tr>
-								<td className="table-column">MASS</td>
-								<td className="table-column">{mass.kg} kg / {mass.lb} lb</td>
-							</tr>
-
-							{payloadWeights.map((item) => (
-								<tr key={item.id}>
-									<td className="table-column">PAYLOAD TO {item.id.toUpperCase()}</td>
-									<td className="table-column">{item.kg} kg / {item.lb} lb</td>
+							<thead data-aos="fade-up" data-aos-duration="3000">
+								<tr>
+									<td className="table-column">HEIGHT</td>
+									<td className="table-column">{height.meters} m / {height.feet} ft</td>
 								</tr>
+								<tr>
+									<td className="table-column">DIAMETER</td>
+									<td className="table-column">{diameter.meters} m / {diameter.feet} ft</td>
+								</tr>
+								<tr>
+									<td className="table-column">MASS</td>
+									<td className="table-column">{mass.kg} kg / {mass.lb} lb</td>
+								</tr>
+
+								{payloadWeights.map((item) => (
+									<tr key={item.id}>
+										<td className="table-column">PAYLOAD TO {item.id.toUpperCase()}</td>
+										<td className="table-column">{item.kg} kg / {item.lb} lb</td>
+									</tr>
 							))}
 
 							</thead>
 						</table>
 						<RelaxWrapper speed={14}>
 							<img
-								src={`img/${rocketImages[name]}.png`}
+								src={`/img/${rocketImages[name]}.png`}
 								alt="rocket"
 								className="rocket"
 							/>
 						</RelaxWrapper>
 
 						<article>
-							<h3 className="features-subtitle">DESCRIPTION</h3>
-							<p className="features-text">
+							<h3 className="features-subtitle" data-aos="fade-up" data-aos-duration="3000">DESCRIPTION</h3>
+							<p className="features-text" data-aos="fade-up" data-aos-duration="3000">
 								{description}
 							</p>
 						</article>
@@ -80,6 +84,5 @@ const Features = (props) => {
 			</>
 		)
 	};
-
 
 export default Features;
