@@ -1,17 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './home.css';
 import '../Welcome/welcome.css';
 import Welcome from "../Welcome/welcome";
 import logo from '../../logo.svg'
 import background from "../../mainbg.jpg";
-import styled, { keyframes } from 'styled-components';
-import { fadeInUp } from 'react-animations';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const Home = ({ company }) => {
 
-	const bounceAnimation = keyframes`${fadeInUp}`;
-	const FadeInUpDiv = styled.div`animation: 1s ${bounceAnimation};`;
-	const FadeInUpDiv2 = styled.div`animation: 2s ${bounceAnimation};`;
+	useEffect(() => {
+		Aos.init({});
+	},[]);
 
 	const welCome = Welcome();
 
@@ -30,15 +30,15 @@ const Home = ({ company }) => {
 					</h2>
 				</hgroup>
 
-				<FadeInUpDiv>
-					<div className="welcome">
-						<div className="text">Neo, sooner or later you're going to realize...</div>
-					</div>
-				</FadeInUpDiv>
+
+				<div className="welcome" data-aos="fade-in" data-aos-duration="3000">
+					<div className="text">Neo, sooner or later you're going to realize...</div>
+				</div>
+
 
 				<div className="row">
-					<FadeInUpDiv>
-						<table className="home_table home_table-manager">
+
+						<table data-aos="fade-up" data-aos-duration="2000" className="home_table home_table-manager">
 							<caption className="home_table-title">
 								Manager
 							</caption>
@@ -62,10 +62,8 @@ const Home = ({ company }) => {
 							</tr>
 							</thead>
 						</table>
-					</FadeInUpDiv>
 
-					<FadeInUpDiv2>
-						<table className="home_table home_table-location">
+						<table data-aos="fade-up" data-aos-duration="2000" className="home_table home_table-location">
 							<caption className="home_table-title">
 								Location
 							</caption>
@@ -84,14 +82,12 @@ const Home = ({ company }) => {
 							</tr>
 							</thead>
 						</table>
-					</FadeInUpDiv2>
 
-					<FadeInUpDiv>
-						<video id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
+						<video data-aos="fade-up" data-aos-duration="2000" id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
 							<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4"/>
 							<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
 						</video>
-					</FadeInUpDiv>
+
 				</div>
 
 			</div>

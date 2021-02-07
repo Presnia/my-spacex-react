@@ -1,13 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import  React from 'react';
+import React, {useEffect} from 'react';
 import Main from '../Main/Main';
 import { Link } from 'react-router-dom';
 import useLaunches from '../useLaunches/useLaunches';
 import './calendar.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Calendar = () => {
 
 	const { data } = useLaunches();
+
+	useEffect(() => {
+		Aos.init({duration: 2000});
+	},[]);
 	
 	return (
 		<>
@@ -17,7 +23,7 @@ const Calendar = () => {
 				<ul className="calendar-list">
 				{
 					data.map(item => (
-          <li className="calendar-item" key={item.id}>
+          <li className="calendar-item" key={item.id} data-aos="fade-up">
 							<article className="launches">
 								<div className="launches-image">
 									<img src={item.links.patch.small} alt="" />
