@@ -30,7 +30,7 @@ const Features = (props) => {
 	  return (
 			<>
 
-				<Main rocket={name} />
+				<Main rocket={name} data-aos="fade-up" data-aos-duration="3000"/>
 				<section className="features">
 					<h2 className="features-title" data-aos="fade-up" data-aos-duration="3000">
 						{name} <br/>Overview

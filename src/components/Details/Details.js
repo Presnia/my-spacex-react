@@ -31,16 +31,18 @@ const Details = (props) => {
 		<section className="details">
 				<div className="container">
 					<div className="details-row">
-						<div className="details-image">
+						<div className="details-image" data-aos="fade-up" data-oas-duration="2000">
 							<img src={launch.links.patch.small} alt={launch.name} />
 						</div>
-						<div className="details-content">
+						<div className="details-content" data-aos="fade-up" data-oas-duration="3000">
 							<p className="details-description">{launch?.details}</p>
 						</div>
-						<YouTube className="details-youtube" videoId={launch.links.youtube_id} />
+						<div data-aos="fade-up" data-oas-duration="3000">
+							<YouTube className="details-youtube" videoId={launch.links.youtube_id} />
+						</div>
 					</div>
 				</div>
-		<a onClick={history.goBack} className="button button-back">go back</a>
+		<a onClick={history.goBack} className="button button-back" data-aos="fade-up" data-oas-duration="3000">go back</a>
 	</section>
 	</>
 )};
