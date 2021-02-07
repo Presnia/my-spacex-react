@@ -25,7 +25,7 @@ const Home = ({ company }) => {
 					<h1>
 						<img className="logo-title" src={logo} alt={company.name}/>
 					</h1>
-					<h2 className="subtitle">
+					<h2 className="subtitle" data-aos="fade-in" data-aos-duration="1000">
 						{company.summary}
 					</h2>
 				</hgroup>
