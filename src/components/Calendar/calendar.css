@@ -1,5 +1,5 @@
 .calendar {
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .calendar-list {
@@ -12,4 +12,9 @@
 
 .calendar-item {
   margin: 30px;
+}
+
+img {
+  width: 128px;
+
 }

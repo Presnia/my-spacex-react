@@ -26,7 +26,7 @@ const Calendar = () => {
           <li className="calendar-item" key={item.id} data-aos="fade-up">
 							<article className="launches">
 								<div className="launches-image">
-									<img src={item.links.patch.small} alt="" />
+									<img src={item.links.patch.small} alt="project picture" />
 								</div>
 								<div className="launches-content">
 									<h2 className="launches-title">{item.name}</h2>
