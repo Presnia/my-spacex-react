@@ -7,7 +7,6 @@ import background from "../../mainbg.jpg";
 import styled, { keyframes } from 'styled-components';
 import { fadeInUp } from 'react-animations';
 
-
 const Home = ({ company }) => {
 
 	const bounceAnimation = keyframes`${fadeInUp}`;
@@ -31,9 +30,11 @@ const Home = ({ company }) => {
 					</h2>
 				</hgroup>
 
-				<div className="welcome">
-					<div className="text">Neo, sooner or later you're going to realize..</div>
-				</div>
+				<FadeInUpDiv>
+					<div className="welcome">
+						<div className="text">Neo, sooner or later you're going to realize...</div>
+					</div>
+				</FadeInUpDiv>
 
 				<div className="row">
 					<FadeInUpDiv>
@@ -85,12 +86,12 @@ const Home = ({ company }) => {
 						</table>
 					</FadeInUpDiv2>
 
-					<FadeInUpDiv2>
+					<FadeInUpDiv>
 						<video id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
 							<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4"/>
 							<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
 						</video>
-					</FadeInUpDiv2>
+					</FadeInUpDiv>
 				</div>
 
 			</div>
