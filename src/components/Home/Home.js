@@ -13,8 +13,6 @@ const Home = ({ company }) => {
 		Aos.init({});
 	},[]);
 
-	const welCome = Welcome();
-
 	return (
 		<main className="main" style={{
 			backgroundImage: `url(${background})`,
@@ -32,7 +30,7 @@ const Home = ({ company }) => {
 
 
 				<div className="welcome" data-aos="fade-in" data-aos-duration="3000">
-					<div className="text">Neo, sooner or later you're going to realize...</div>
+					<div className="text">{ Welcome() }</div>
 				</div>
 
 
