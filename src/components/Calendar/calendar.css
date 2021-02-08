@@ -14,7 +14,21 @@
   margin: 30px;
 }
 
+.launches-image {
+  min-height: 128px;
+}
+
+.launches-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.launches-content h2 {
+  text-align: center;
+}
+
 img {
   width: 128px;
-
 }

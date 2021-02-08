@@ -37,12 +37,12 @@ const Details = (props) => {
 						<div className="details-content" data-aos="fade-up" data-oas-duration="3000">
 							<p className="details-description">{launch?.details}</p>
 						</div>
-						<div data-aos="fade-up" data-oas-duration="3000">
+						<div className="video-block" data-aos="fade-up" data-oas-duration="3000">
 							<YouTube className="details-youtube" videoId={launch.links.youtube_id} />
 						</div>
 					</div>
 				</div>
-		<a onClick={history.goBack} className="button button-back" data-aos="fade-up" data-oas-duration="3000">go back</a>
+		<a onClick={history.goBack} className="button button-back" data-aos="flip-left" data-oas-duration="3000">go back</a>
 	</section>
 	</>
 )};
