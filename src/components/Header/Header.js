@@ -18,7 +18,7 @@ const Header = (props) => {
         <ul className="list">
           {props.rockets.map((item, i) => (
             <li key={i} className="item">
-              <Link to={`/rocket/${item.replace(' ', '_')}/${item.id}`} onClick={() => {
+              <Link to={`/rocket/${item.replace(' ', '_')}`} onClick={() => {
                 props.changeRocket(item);
               }}
                     className="item-link"

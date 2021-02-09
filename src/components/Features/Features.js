@@ -15,13 +15,14 @@ const rocketImages = {
 
 const Features = (props) => {
 
-	const [rocket, setRocket] = useState([])
+	const [rocket, setRocket] = useState([]);
 	const { getRocket } = useRockets();
 
 	useEffect(() => {
 		setRocket(getRocket(props.id));
 	}, [getRocket, props.id]);
 	console.log(rocket)
+
 
 	useEffect(() => {
 		Aos.init({});
