@@ -21,7 +21,6 @@ const Features = (props) => {
 	useEffect(() => {
 		setRocket(getRocket(props.id));
 	}, [getRocket, props.id]);
-	console.log(rocket)
 
 
 	useEffect(() => {

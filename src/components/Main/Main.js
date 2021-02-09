@@ -15,13 +15,15 @@ const Main = ({rocket, name}) => {
       <h1 className="title">{ name || rocket }</h1>
 
       {rocket && <div className="video-container">
-        <video
-            className="video" 
-            autoPlay loop muted  
-            src={`/video/${video.hasOwnProperty(rocket) ? 
-                video[rocket] :
-                video.other}.mp4`}
-        />
+        <div className="wrapper-video">
+          <video
+            className="video"
+            autoPlay loop muted
+            src={`/video/${video.hasOwnProperty(rocket) ?
+              video[rocket] :
+              video.other}.mp4`}
+          />
+        </div>
       </div>}
     </section>
 )};
