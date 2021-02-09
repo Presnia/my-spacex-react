@@ -2,7 +2,7 @@
 import React, {useEffect} from 'react';
 import Main from '../Main/Main';
 import { Link } from 'react-router-dom';
-import useLaunches from '../useLaunches/useLaunches';
+import useLaunches from '../Hooks/useLaunches';
 import './calendar.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';

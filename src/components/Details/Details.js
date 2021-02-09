@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Main from '../Main/Main';
-import useLaunches from '../useLaunches/useLaunches';
+import useLaunches from '../Hooks/useLaunches';
 import YouTube from 'react-youtube';
 import './details.css';
 import Aos from "aos";
@@ -14,7 +14,7 @@ const Details = (props) => {
 	const { getLaunch } = useLaunches();
 
 	useEffect(() => {
-		setLaunch(getLaunch(props.match.params.id));
+		setLaunch(getLaunch(props.match.params.id)); 
 	}, [getLaunch, props.match.params.id]);
 
 	useEffect(() => {
