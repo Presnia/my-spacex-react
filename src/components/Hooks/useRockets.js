@@ -6,13 +6,14 @@ const fetchData = new FetchData();
 const useRockets = () => {
 
   const [data, setData] = useState([]);
-
   useEffect(() => {
     fetchData.getRocket()
       .then(rocket => setData(state => [...rocket]))
   }, []);
 
-  return { data };
+  const getRocket = id => data.find(item => item.id === id);
+
+  return { data, getRocket };
 }
 
 export default useRockets;

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import RelaxWrapper from 'react-rellax-wrapper';
 import Main from '../Main/Main';
 import useRockets from "../Hooks/useRockets";
@@ -15,8 +15,13 @@ const rocketImages = {
 
 const Features = (props) => {
 
-	const { data } = useRockets();
-	console.log(props)
+	const [rocket, setRocket] = useState(null)
+	const { getRocket } = useRockets();
+
+	useEffect(() => {
+		setRocket(getRocket(props.id));
+	}, [getRocket, props.id]);
+	console.log(rocket)
 
 	useEffect(() => {
 		Aos.init({});
