@@ -15,7 +15,7 @@ const rocketImages = {
 
 const Features = (props) => {
 
-	const [rocket, setRocket] = useState(null)
+	const [rocket, setRocket] = useState([])
 	const { getRocket } = useRockets();
 
 	useEffect(() => {
