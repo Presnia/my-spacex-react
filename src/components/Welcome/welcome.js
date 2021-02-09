@@ -1,3 +1,5 @@
+import React from "react";
+
 const Welcome = () => {
   class TextScramble {
     constructor(el) {
@@ -67,14 +69,18 @@ const Welcome = () => {
   const fx = new TextScramble(el);
 
   let counter = 0;
-  const next = () => {
+  const Next = () => {
     fx.setText(phrases[counter]).then(() => {
-      setTimeout(next, 800);
+      setTimeout(Next, 800);
     })
     counter = (counter + 1) % phrases.length;
   }
 
-  next();
+  return (
+    <div className="welcome" data-aos="fade-in" data-aos-duration="3000">
+      <div className="text">Neo, sooner or later you're going to realize...</div>
+    </div>
+  )
 }
 
 export default Welcome;
