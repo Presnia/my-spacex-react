@@ -14,7 +14,7 @@ const Details = (props) => {
 	const { getLaunch } = useLaunches();
 
 	useEffect(() => {
-		setLaunch(getLaunch(props.match.params.id)); 
+		setLaunch(getLaunch(props.match.params.id));
 	}, [getLaunch, props.match.params.id]);
 
 	useEffect(() => {
@@ -42,7 +42,7 @@ const Details = (props) => {
 						</div>
 					</div>
 				</div>
-		<a onClick={history.goBack} className="button button-back" data-aos="flip-left" data-oas-duration="3000">go back</a>
+		<a onClick={history.goBack} className="button button-back" data-aos="flip-left" data-oas-duration="3000">Back</a>
 	</section>
 	</>
 )};
