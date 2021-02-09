@@ -8,7 +8,6 @@ const useRockets = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log(1)
     fetchData.getRocket()
       .then(rocket => setData(state => [...rocket]))
   }, []);
