@@ -42,7 +42,7 @@ const Features = (props) => {
 				<Main rocket={name} data-aos="fade-up" data-aos-duration="3000"/>
 				<section className="features">
 					<h2 className="features-title" data-aos="fade-up" data-aos-duration="3000">
-						{name} <br/>Overview
+						{name || rocket.name} <br/>Overview
 					</h2>
 					<div className="overview">
 
