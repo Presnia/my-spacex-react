@@ -60,7 +60,7 @@ class App extends React.Component {
             render={({match}) => this.state.rocketFeatures &&
             <Features {...this.state.rocketFeatures} match={match} />} />
 
-        <Route path='/calendar' component={ Calendar }/>
+        <Route path='/calendar' component={ Calendar } />
 
         <Route path='/details/:id' component={ Details } />
   
